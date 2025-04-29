@@ -1,20 +1,28 @@
-import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { ThemeProviderCustom } from './contexts/ThemeProvider';
+import { useTheme } from './hooks/useTheme';
 import { GlobalStyle } from './styles/global';
 import { lightTheme, darkTheme } from './styles/theme';
 import AppRoutes from './routes';
+import { ComandaProvider } from './contexts/ComandaContext';
 
-function App() {
-	const [isDark, setIsDark] = useState(false);
-	const toggleTheme = () => setIsDark((prev) => !prev);
+function ThemeWrapper() {
+	const { isDark } = useTheme();
 
 	return (
 		<ThemeProvider theme={isDark ? darkTheme : lightTheme}>
 			<GlobalStyle />
-			<button onClick={toggleTheme}>Toggle {isDark ? 'Light' : 'Dark'} Theme</button>
 			<AppRoutes />
 		</ThemeProvider>
 	);
 }
 
-export default App;
+export default function App() {
+	return (
+		<ThemeProviderCustom>
+			<ComandaProvider>
+				<ThemeWrapper />
+			</ComandaProvider>
+		</ThemeProviderCustom>
+	);
+}
