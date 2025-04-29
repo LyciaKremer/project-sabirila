@@ -18,7 +18,7 @@ export const ModalContainer = styled.div`
 	max-width: 500px;
 	height: 100%;
 	overflow-y: auto;
-	max-height: 90vh;
+	max-height: 80vh;
 `;
 
 export const ModalContainerMenssage = styled.div`
@@ -164,10 +164,11 @@ export const ActionButton = styled.button<ActionButtonProps>`
 		props.variant === 'secondary'
 			? css`
 					background-color: transparent;
-					color: ${({ theme }) => theme.complementary};
-					border: 1px solid ${({ theme }) => theme.complementary};
+					color: ${({ theme }) => theme.secondary};
+					border: 1px solid ${({ theme }) => theme.secondary};
 					&:hover {
 						background-color: #f3b84a;
+						color: ${({ theme }) => theme.complementary};
 					}
 				`
 			: css`
