@@ -20,25 +20,25 @@ export default function Home() {
 					<span className="text">
 						Comanda <BiChevronRight />
 					</span>
-					<img src="/public/order.svg" alt="Comanda" />
+					<img src="./order.svg" alt="Comanda" />
 				</S.Shortcut>
 				<S.Shortcut to="/precos">
 					<span className="text">
 						Preços <BiChevronRight />
 					</span>
-					<img src="/public/order.svg" alt="Comanda" />
+					<img src="./order.svg" alt="Comanda" />
 				</S.Shortcut>
 				<S.Shortcut to="/vendas">
 					<span className="text">
 						Vendas <BiChevronRight />
 					</span>
-					<img src="/public/order.svg" alt="Comanda" />
+					<img src="./order.svg" alt="Comanda" />
 				</S.Shortcut>
 				<S.Shortcut to="/faturamento">
 					<span className="text">
 						Faturamento <BiChevronRight />
 					</span>
-					<img src="/public/order.svg" alt="Comanda" />
+					<img src="./order.svg" alt="Comanda" />
 				</S.Shortcut>
 			</S.Shortcuts>
 		</S.Container>
